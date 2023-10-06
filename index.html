@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Panel Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li data-target="home-content"><img src="images/home.png"></li> 
+            <li data-target="dev-content"><img src="images/dev.png"></li> 
+            <li data-target="cv-content"><img src="images/CV.png"></li> 
+            <li data-target="contact-content"><img src="images/contact.png"></li> 
+        </ul>
+    </div>
+    <div id="left-panel">
+        <h1>Left Panel</h1>
+        <p>This is the content of the left panel. It occupies approximately 70% of the space.</p>
+
+        <div class="top-bar">
+            <div class="logo">
+                <!-- Add your logo here -->
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="search-bar">
+                <!-- Add your search bar input and button here -->
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+            <div class="user-button">
+                <!-- Add your user button here -->
+                <button>User</button>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="content" id="home-content">
+                <h2>Welcome to Our Home Page</h2>
+                <p>This is the home page content. You can add any information or welcome message you like here.</p>
+            </div>
+            <div class="content" id="dev-content">
+                <h2>Development Section</h2>
+                <p>We specialize in web development and offer a wide range of services. Our team of skilled developers is dedicated to creating amazing web solutions for you.</p>
+            </div>
+            <div class="content" id="cv-content">
+                <h2>Curriculum Vitae</h2>
+                <p>Here you can find my CV with information about my education, work experience, and skills. Feel free to contact me if you have any questions!</p>
+            </div>
+            <div class="content" id="contact-content">
+                <h2>Contact Us</h2>
+                <p>If you would like to get in touch with us, please use the contact information below:</p>
+                <ul>
+                    <li><strong>Email:</strong> contact@example.com</li>
+                    <li><strong>Phone:</strong> +1 (123) 456-7890</li>
+                    <li><strong>Address:</strong> 123 Main Street, City, Country</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="right-panel">
+        <h1>Right Panel</h1>
+        <p>This is the content of the right panel. It occupies approximately 30% of the space.</p>
+        <div class="container"><img style="max-width: 100%;" src="images/f80e5e62bc3d91dfdc87b8bc3431c290.gif"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
