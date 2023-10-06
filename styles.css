@@ -41,38 +41,6 @@ body {
     max-width: 100px; /* Adjust the logo size as needed */
 }
 
-.search-bar {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    margin: 0 10px;
-}
-
-.search-bar input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-}
-
-.search-bar button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: #7096a5;
-    color: white;
-    cursor: pointer;
-}
-
-.user-button button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: #053c52;
-    color: white;
-    cursor: pointer;
-}
-
 .content-container {
     flex: 1;
     padding: 20px;
@@ -142,6 +110,8 @@ body {
 .navbar li img {
     text-decoration: none; /* Remove underline from anchor elements */
     transition: box-shadow 0.3s, background-color 0.3s; /* Add transition effect */
+    border-radius: 50%;
+    padding: 10%;
 }
 
 .navbar li img:hover {
@@ -170,13 +140,5 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
-    .search-bar {
-        flex-direction: column;
-        align-items: center;
-        margin: 10px 0;
-    }
-    .search-bar input, .search-bar button {
-        margin: 5px 0;
     }
 }
