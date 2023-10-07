@@ -161,6 +161,23 @@ body::before {
     background-color: #00bfff; /* Change background color when clicked */
     box-shadow: none; /* Remove shadow when clicked */
 }
+.message-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000; /* Adjust z-index as needed */
+}
+
+.message {
+    font-size: 28px;
+    text-align: center;
+}
 
 @media (max-width: 768px) {
     .container {
@@ -170,15 +187,20 @@ body::before {
     .navbar{
        /* visibility: hidden;*/
     }
-    #left-panel, #right-panel{
+    #left-panel, #right-panel, .navbar{
         flex: 100%;
         border-radius: 20px;
         width: 100%;
         transform: none; /* Reset skew for smaller screens */
+        visibility: hidden;
     }
     .top-bar {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+    .message-container {
+        display: block;
+    }
+
 }
