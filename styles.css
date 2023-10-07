@@ -6,7 +6,24 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #949393;
+    position: relative;
 }
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/bkg.jpg'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(5px); /* Adjust the value (5px in this example) to control the blur intensity */
+    z-index: -1; /* Place the pseudo-element below the content of the body */
+}
+
 
 .container {
     display: flex;
@@ -20,7 +37,7 @@ body {
 }
 
 #left-panel {
-    flex: 1;
+    flex: 2;
     padding: 20px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.5); /* Glass effect with transparency */
@@ -28,6 +45,14 @@ body {
     margin: 1%;
     display: flex;
     flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  
+    backdrop-filter: blur(15px);
+    min-height: 70vh;
+
 }
 
 .top-bar {
@@ -76,23 +101,37 @@ body {
 }
 
 #right-panel {
-    flex: 1;
+    flex: 0.65;
     padding: 1%;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.5); /* Glass effect with transparency */
-    transform: skew(-1deg); /* Incline towards each other */
     margin: 1%;
-    max-width: 20%;
     margin-right: 5%;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Adjust the shadow as needed */
+    backdrop-filter: blur(15px);
+    width: 30%; /* Reduce the width to 30% */
+    min-height: 70vh;
+    transform:perspective(500px) rotateY(-10deg);
+
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.2); /* Navbar background color with transparency */
+    background-color: rgba(255, 255, 255, 0.5); /* Glass effect with transparency */
     padding: 1%;
     border-radius: 20px;
     margin: 1%;
     margin-left: 5%;
-    width: 3%;
+    width: 60px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  
+    backdrop-filter: blur(15px);
+  
 }
 
 .navbar h2 {
@@ -129,11 +168,12 @@ body {
         align-items: center;
     }
     .navbar{
-        max-width: 10%;
+       /* visibility: hidden;*/
     }
-    #left-panel, #right-panel, .navbar {
+    #left-panel, #right-panel{
         flex: 100%;
         border-radius: 20px;
+        width: 100%;
         transform: none; /* Reset skew for smaller screens */
     }
     .top-bar {
