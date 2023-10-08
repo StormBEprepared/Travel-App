@@ -51,6 +51,7 @@ body::before {
   
     backdrop-filter: blur(15px);
     min-height: 70vh;
+    max-height: 100vh;
 
 }
 
@@ -112,18 +113,14 @@ body::before {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Adjust the shadow as needed */
     backdrop-filter: blur(15px);
     width: 30%; /* Reduce the width to 30% */
-    min-height: 80vh;
-    transform: perspective(500px) rotateY(-10deg);
+    min-height: 78vh;
+    max-height: 108vh;
+    transform: perspective(500px) rotateY(-8deg);
     display: flex; /* Make the panel a flex container */
     flex-direction: column; /* Stack children vertically */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     position: relative; /* Add relative positioning */
-}
-
-#right-panel h1,
-#right-panel p {
-    display: none; /* Hide the text inside the right panel */
 }
 
 #right-panel iframe {
@@ -142,6 +139,7 @@ body::before {
     border-radius: 20px;
     margin-left: 5%;
     max-width: 55px;
+    min-width: 30px;
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 100px;
     background-color: rgba(255, 255, 255, 0.45);
@@ -158,6 +156,7 @@ body::before {
 .navbar li{
     position: relative; /* Ensure the li is a positioned container */
     padding: 1px;
+    border-radius: 50%;
 }
 .navbar li img {
     text-decoration: none; /* Remove underline from anchor elements */
@@ -181,13 +180,12 @@ body::before {
 .navbar .indicator {
     position: absolute;
     width: 10px; /* Adjust the width of the indicator */
-    border-radius: 1px;
     height: 40px; /* Adjust the height of the indicator */
     background-color: #aeff00; /* Color of the indicator */
     transform: translateX(-50%) translateY(-50%); /* Center the indicator */
     transition: transform 0.3s ease-in-out; /* Add a transition for smooth movement */
     opacity: 0; /* Initially, make it invisible */
-    top:50%;
+    top:49%;
 }
 
 .navbar li.active .indicator {
@@ -212,7 +210,7 @@ body::before {
 }
 
 @media (max-width: 768px) {
-    .container {
+    /*.container {
         flex-direction: column;
         align-items: center;
     }
@@ -244,7 +242,6 @@ body::before {
     .message {
         font-size: 16px;
         text-align: center;
-    }
-
+    }*/
 }
 

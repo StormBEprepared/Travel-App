@@ -1,3 +1,14 @@
+//  The key is restricted from Google Cloud Console. Any bad intentioned usage will only result in errors for the end user.
+//The below code prevents users to open Dev Tools from keyboard. It can still be opened by using the mouse only
+/*document.addEventListener("keydown", (e) => {
+    if (e.ctrlKey || e.keyCode==123) {
+     e.stopPropagation();
+     e.preventDefault();
+    }
+   });*/
+
+
+
 // Get references to the content divs and navbar list items
 const contentDivs = document.querySelectorAll('.content');
 const navbarItems = document.querySelectorAll('.navbar li');
@@ -28,3 +39,4 @@ navbarItems.forEach(item => {
 
 // Show the initial content when the page loads
 showContent('home-content'); // Change 'home-content' to the default content ID you want to display
+
