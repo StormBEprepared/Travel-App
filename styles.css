@@ -7,6 +7,7 @@ body {
     min-height: 100vh;
     background-color: #949393;
     position: relative;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body::before {
@@ -16,7 +17,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('images/bkg.jpg'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+    background-image: url('images/ldn.jpg'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -40,13 +41,12 @@ body::before {
     flex: 2;
     padding: 20px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.5); /* Glass effect with transparency */
     margin: 1%;
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.45);
+    background-color: rgba(255, 255, 255, 0.85);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   
     backdrop-filter: blur(15px);
@@ -61,7 +61,14 @@ body::before {
     align-items: center;
     padding: 10px 20px;
 }
-
+.top-bar h1 {
+    background-color: #FFFF29; /* Blue background color */
+    border-radius: 20px 0 0 20px; /* Rounded left side corners */
+    padding: 10px; /* Padding for the h3 element */
+    color: black; /* Text color */
+    margin-right: -41px; /* Reset margin */
+    margin-left: 10px;
+}
 .logo img {
     max-width: 100px; /* Adjust the logo size as needed */
 }
@@ -104,12 +111,11 @@ body::before {
     flex: 0.65;
     padding: 2px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.5); /* Glass effect with transparency */
     margin: 1%;
     margin-right: 5%;
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.45);
+    background-color: rgba(255, 255, 255, 0.85);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Adjust the shadow as needed */
     backdrop-filter: blur(15px);
     width: 30%; /* Reduce the width to 30% */
@@ -134,15 +140,14 @@ body::before {
 }
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0.5); /* Glass effect with transparency */
     padding: 5px;
     border-radius: 20px;
     margin-left: 5%;
     max-width: 55px;
-    min-width: 30px;
+    min-width: 20px;
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.45);
+    background-color: rgba(255, 255, 255, 0.85);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     
     backdrop-filter: blur(15px);
@@ -157,6 +162,9 @@ body::before {
     position: relative; /* Ensure the li is a positioned container */
     padding: 1px;
     border-radius: 50%;
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .navbar li img {
     text-decoration: none; /* Remove underline from anchor elements */
@@ -168,12 +176,12 @@ body::before {
 }
 
 .navbar li img:hover {
-    box-shadow: 0 0 10px #aeff00, 0 0 20px #aeff00, 0 0 30px #aeff00; /* Neon shadow on hover */
-    background-color: #aeff00; /* Change background color when clicked */
+    box-shadow: 0 0 10px #FFFF29, 0 0 20px #FFFF29, 0 0 30px #FFFF29; /* Neon shadow on hover */
+    background-color: #FFFF29; /* Change background color when clicked */
 }
 
 .navbar li img:active {
-    background-color: #aeff00; /* Change background color when clicked */
+    background-color: #FFFF29; /* Change background color when clicked */
     box-shadow: none; /* Remove shadow when clicked */
     padding: 1px;
 }
@@ -181,7 +189,7 @@ body::before {
     position: absolute;
     width: 10px; /* Adjust the width of the indicator */
     height: 40px; /* Adjust the height of the indicator */
-    background-color: #aeff00; /* Color of the indicator */
+    background-color: #FFFF29; /* Color of the indicator */
     transform: translateX(-50%) translateY(-50%); /* Center the indicator */
     transition: transform 0.3s ease-in-out; /* Add a transition for smooth movement */
     opacity: 0; /* Initially, make it invisible */
@@ -210,7 +218,7 @@ body::before {
 }
 
 @media (max-width: 768px) {
-    /*.container {
+    .container {
         flex-direction: column;
         align-items: center;
     }
@@ -242,6 +250,6 @@ body::before {
     .message {
         font-size: 16px;
         text-align: center;
-    }*/
+    }
 }
 
