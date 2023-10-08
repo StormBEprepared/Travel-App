@@ -6,7 +6,6 @@ let DestinationNameRef = document.getElementById("destination-name");
 let getInfo = () => {
     let DestinationName = DestinationNameRef.value;
     UpdateMap(DestinationName);
-    calculateDistance();
 }
 window.addEventListener("load", getInfo);
 DestinationNameRef.addEventListener("keydown", function (e) {
