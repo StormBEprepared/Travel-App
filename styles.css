@@ -138,12 +138,12 @@ body::before {
 
 .navbar {
     background-color: rgba(255, 255, 255, 0.5); /* Glass effect with transparency */
-    padding: 10px;
+    padding: 5px;
     border-radius: 20px;
     margin-left: 5%;
-    max-width: 50px;
+    max-width: 55px;
     border: 1px solid rgba(255, 255, 255, .25);
-    border-radius: 20px;
+    border-radius: 100px;
     background-color: rgba(255, 255, 255, 0.45);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     
@@ -155,21 +155,46 @@ body::before {
     list-style-type: none;
     padding: 0;
 }
-
+.navbar li{
+    position: relative; /* Ensure the li is a positioned container */
+    padding: 1px;
+}
 .navbar li img {
     text-decoration: none; /* Remove underline from anchor elements */
     transition: box-shadow 0.3s, background-color 0.3s; /* Add transition effect */
     border-radius: 50%;
+    width: 100%;
+    margin: 1%;
+    padding: 1px;
 }
 
 .navbar li img:hover {
-    box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff; /* Neon shadow on hover */
+    box-shadow: 0 0 10px #aeff00, 0 0 20px #aeff00, 0 0 30px #aeff00; /* Neon shadow on hover */
+    background-color: #aeff00; /* Change background color when clicked */
 }
 
 .navbar li img:active {
-    background-color: #00bfff; /* Change background color when clicked */
+    background-color: #aeff00; /* Change background color when clicked */
     box-shadow: none; /* Remove shadow when clicked */
+    padding: 1px;
 }
+.navbar .indicator {
+    position: absolute;
+    width: 10px; /* Adjust the width of the indicator */
+    border-radius: 1px;
+    height: 40px; /* Adjust the height of the indicator */
+    background-color: #aeff00; /* Color of the indicator */
+    transform: translateX(-50%) translateY(-50%); /* Center the indicator */
+    transition: transform 0.3s ease-in-out; /* Add a transition for smooth movement */
+    opacity: 0; /* Initially, make it invisible */
+    top:50%;
+}
+
+.navbar li.active .indicator {
+    opacity: 1; /* Show the indicator when the li is active */
+    transform: translateX(-50%) translateY(-50%) scale(1.2); /* Adjust the size and position on hover */
+}
+
 .message-container {
     display: none;
     position: fixed;
