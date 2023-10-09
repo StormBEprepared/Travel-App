@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonid Stefanel Pintea</title>
+    <title>Travalot</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <div class="navbar">
         <ul>
             <li data-target="home-content"><img src="images/icons8-house-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
-            <li data-target="dev-content"><img src="images/icons8-dev-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
-            <li data-target="cv-content"><img src="images/icons8-achievement-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
-            <li data-target="contact-content"><img src="images/icons8-paper-plane-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
+            <li data-target="visited-content"><img src="images/icons8-dev-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
+            <li data-target="wishlist-content"><img src="images/icons8-achievement-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
+            <li data-target="maps-content"><img src="images/icons8-paper-plane-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
         </ul>
         <!--Script added in comment in order for the navigation indicator bar to not work. Will change if needed in further updates.<script src="navbar.js"></script>-->
     </div>
@@ -33,9 +33,9 @@
                 <h2>Welcome to Our Home Page</h2>
                 <p>This is the home page content. You can add any information or welcome message you like here.</p>
             </div>
-            <div class="content" id="dev-content">
-                <h2>Development Section</h2>
-                <p>We specialize in web development and offer a wide range of services. Our team of skilled developers is dedicated to creating amazing web solutions for you.</p>
+            <div class="content" id="visited-content">
+                <h2>Visited Places</h2>
+                <p>The following cards should contain links to cloud saved pictures of specific places. When clicking on specific card/place the map on rightpanel gets updated.</p>
                 <div class="top-bar" style="justify-content: center; flex-wrap: wrap;">
                     <div class="card-container" style="justify-content: center; flex-wrap: wrap;" id="page1">
                         <div class="card">
@@ -130,18 +130,12 @@
                     <script src="pagination.js"></script>    
                 </div>
             </div>
-            <div class="content" id="cv-content">
-                <h2>Curriculum Vitae</h2>
-                <p>Here you can find my CV with information about my education, work experience, and skills. Feel free to contact me if you have any questions!</p>
+            <div class="content" id="wishlist-content">
+                <h2>Here a list of places that the user wishes to go to should be displayed... TBC</h2>
             </div>
-            <div class="content" id="contact-content">
-                <h2>Contact Us</h2>
-                <p>If you would like to get in touch with us, please use the contact information below:</p>
-                <ul>
-                    <li><strong>Email:</strong> contact@example.com</li>
-                    <li><strong>Phone:</strong> +1 (123) 456-7890</li>
-                    <li><strong>Address:</strong> 123 Main Street, City, Country</li>
-                </ul>
+            <div class="content" id="maps-content">
+                <h2>Here a google earth map shall open... TBC</h2>
+                
             </div>
         </div>
     </div>
