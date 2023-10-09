@@ -46,7 +46,7 @@ body::before {
     flex-direction: column;
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(213, 213, 213, 0.85);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   
     backdrop-filter: blur(15px);
@@ -112,13 +112,11 @@ body::before {
 
 #right-panel {
     flex: 0.65;
-    padding: 2px;
     border-radius: 20px;
-    margin: 1%;
     margin-right: 5%;
-    border: 1px solid rgba(255, 255, 255, .25);
+    border: 3px solid rgba(93, 93, 93, 0.25);
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(213, 213, 213, 0.85);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Adjust the shadow as needed */
     backdrop-filter: blur(15px);
     width: 30%; /* Reduce the width to 30% */
@@ -139,7 +137,6 @@ body::before {
     position: absolute; /* Position the iframe absolutely within the panel */
     top: 0;
     left: 0;
-    padding: 1px;
 }
 
 .navbar {
@@ -150,7 +147,7 @@ body::before {
     min-width: 20px;
     border: 1px solid rgba(255, 255, 255, .25);
     border-radius: 100px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(213, 213, 213, 0.85);
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     
     backdrop-filter: blur(15px);
