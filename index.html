@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travalot</title>
+    <title>Trav 'A' lot!</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <div class="responsive-navbar">
+        <ul>
+          <li data-target="home-content"><img src="images/icons8-property-64.png"> <div class="indicator"></div></li>
+          <li data-target="visited-content"><img src="images/icons8-place-64.png"> <div class="indicator"></div></li>
+          <li data-target="wishlist-content"><img src="images/icons8-flying-star-64.png"> <div class="indicator"></div></li>
+          <li data-target="maps-content"><img src="images/icons8-earth-planet-64.png"> <div class="indicator"></div></li>
+        </ul>
+      </div>
+      
     <div class="navbar">
         <ul>
-            <li data-target="home-content"><img src="images/icons8-house-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
-            <li data-target="visited-content"><img src="images/icons8-dev-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
-            <li data-target="wishlist-content"><img src="images/icons8-achievement-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
-            <li data-target="maps-content"><img src="images/icons8-paper-plane-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
+            <li data-target="home-content"><img src="images/icons8-property-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
+            <li data-target="visited-content"><img src="images/icons8-place-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
+            <li data-target="wishlist-content"><img src="images/icons8-flying-star-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
+            <li data-target="maps-content" id="fullscreen-button"><img src="images/icons8-earth-planet-64.png">            <div class="indicator"></div> <!-- New element for the indicator -->            </li> 
         </ul>
         <!--Script added in comment in order for the navigation indicator bar to not work. Will change if needed in further updates.<script src="navbar.js"></script>-->
     </div>
@@ -24,14 +33,26 @@
         <div class="top-bar">
             <div class="logo">
                 <!-- Add your logo here -->
-                <img src="logo.png" alt="Logo">
+                <img src="images/icons8-departures-64.png" alt="Logo">
             </div>
             <h1>Trav 'A' lot!</h1>
         </div>
         <div class="content-container">
             <div class="content" id="home-content">
-                <h2>Welcome to Our Home Page</h2>
-                <p>This is the home page content. You can add any information or welcome message you like here.</p>
+                <h2>Welcome to your travel buddy</h2>
+                <div class="image-text-container">
+                    <div class="image">
+                        <img src="images/maldives-island.jpg" alt="Image Alt Text">
+                    </div>
+                    <div class="text">
+                        <p>&nbsp;&nbsp;&nbsp;Travel, with its power to broaden horizons and offer new perspectives, is an essential chapter in the book of life. It liberates us from the ordinary and introduces us to the extraordinary, leaving indelible marks on our souls.</p>
+                        <p>&nbsp;&nbsp;&nbsp;Traveling offers a remarkable escape from the pressures of everyday life, providing a much-needed respite for the mind and soul. </p>
+                        <p>&nbsp;&nbsp;&nbsp;Exploring new destinations and immersing oneself in different cultures can be a therapeutic experience, allowing us to unwind, disconnect from the digital world, and rediscover the simple joys of existence.</p>  
+                        <p>&nbsp;&nbsp;&nbsp;Whether it's the serenity of a tranquil beach, the wonder of a historic city, or the rejuvenation of a pristine natural landscape, travel provides a perfect avenue for distressing and savoring the richness of life.</p>
+                        <p>&nbsp;&nbsp;&nbsp;Trav'a'lot has as main purpose to fill all the needs of a traveller, working as a reference point for memories and offering the possibility to plan new journeys. The mobile version is working, however the best experience will be from a Desktop.</p>
+                    </div>
+                </div>
+        
             </div>
             <div class="content" id="visited-content">
                 <h2>Visited Places</h2>
@@ -39,7 +60,12 @@
                 <div class="top-bar" style="justify-content: center; flex-wrap: wrap;">
                     <div class="card-container" style="justify-content: center; flex-wrap: wrap;" id="page1">
                         <div class="card">
-                            <div class="card2">
+                            <div class="card2" onclick="UpdateMap('Berlin')">
+                                <div class="contentOfTravelled">
+                                    <h4>Berlin</h4>
+                                    <p>Some text goes here.Some text goes here.Some text goes here.Some text goes here.</p>
+                                    <button>Info</button>
+                                  </div>                              
                             </div>
                         </div>
                         <div class="card">
@@ -124,14 +150,60 @@
                     <div class="card-container" style="justify-content: center; flex-wrap: wrap;" id="page2">
                     </div>
                     <div class="pagination">
-                        <button id="prevPage">Previous Page</button>
-                        <button id="nextPage">Next Page</button>
+                        <button id="prevPage">⬅️</button>
+                        <button id="nextPage">➡️</button>
                     </div>
                     <script src="pagination.js"></script>    
                 </div>
             </div>
             <div class="content" id="wishlist-content">
                 <h2>Here a list of places that the user wishes to go to. Once clicked on a destination the map gets updated. Might introduce Booking.com API for pricing on accomodation and flights API for getting flight tickets prices ( will need some input for origin as it might not be London all times.).... TBC</h2>
+                <div class="image-text-container">
+                    <div class="image">
+                        <h3>Places Wishlist</h3>
+                        <div class="places-list">
+                            <ul>
+                            <li onclick="UpdateMap('Berlin')">Berlin</li>
+                            <li onclick="UpdateMap('Prague')">Prague</li>
+                            <li>Destination 3</li>
+                            <li>Destination 1</li>
+                            <li>Destination 2</li>
+                            <li>Destination 3</li>
+                            <li>Destination 1</li>
+                            <li>Destination 2</li>
+                            <li>Destination 3</li>
+                            <li>Destination 1</li>
+                            <li>Destination 2</li>
+                            <li>Destination 3</li>
+                            <li>Destination 1</li>
+                            <li>Destination 2</li>
+                            <li>Destination 3</li>
+                            <li>Destination 1</li>
+                            <li>Destination 2</li>
+                            <li>Destination 3</li>
+                            <li>Destination 1</li>
+                            <li>Destination 2</li>
+                            <li>Destination 3</li>
+                            <li>Destination 1</li>
+                            <li>Destination 2</li>
+                            <li>Destination 3</li>
+                            <!-- Add more list items as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <div class="containersWishlist">
+                            <div class="containerWishlist">
+                            <h3>MAPS FOR ACCOMMODATION</h3>
+                            </div>
+                            <div class="containerWishlist">
+                            <input type="text" placeholder="Origin">
+                            <h3>FLIGHTS TO DESTINATION</h3>
+                            <!-- You can add other elements related to flights here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="content" id="maps-content">
                 <h2>Here a google earth map shall open, or to do a smooth transition into full screen mode of the already existing map on right panel , but with satellite view at least... TBC</h2>
@@ -145,7 +217,7 @@
         loading="lazy"
         allowfullscreen
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4&q=London">
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4&q=London&maptype=satellite">
         </iframe>
        
         <script src="maps.js"></script>
