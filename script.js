@@ -1,11 +1,11 @@
 //  The key is restricted from Google Cloud Console. Any bad intentioned usage will only result in errors for the end user.
 //The below code prevents users to open Dev Tools from keyboard. It can still be opened by using the mouse only
-/*document.addEventListener("keydown", (e) => {
+document.addEventListener("keydown", (e) => {
     if (e.ctrlKey || e.keyCode==123) {
      e.stopPropagation();
      e.preventDefault();
     }
-   });*/
+   });
 
 /*alert("This website works with cookies. Your data will only be saved locally through them so features like 'wishlist' and 'visited places' will work without the need of an API / Database /etc. :)")*/
 
