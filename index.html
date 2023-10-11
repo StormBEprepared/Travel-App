@@ -39,7 +39,7 @@
         </div>
         <div class="content-container">
             <div class="content" id="home-content">
-                <h2>Welcome to your travel buddy</h2>
+                <h2>Welcome to your travel companion</h2>
                 <div class="image-text-container">
                     <div class="image">
                         <img src="images/maldives-island.jpg" alt="Image Alt Text">
@@ -62,7 +62,7 @@
                         <div class="card">
                             <div class="card2" onclick="UpdateMap('Berlin')">
                                 <div class="contentOfTravelled">
-                                    <h4>Berlin</h4>
+                                    <h4 style="padding-top:5%;">Berlin</h4>
                                     <p>Some text goes here.Some text goes here.Some text goes here.Some text goes here.</p>
                                     <button>Info</button>
                                   </div>                              
@@ -157,10 +157,9 @@
                 </div>
             </div>
             <div class="content" id="wishlist-content">
-                <h2>Here a list of places that the user wishes to go to. Once clicked on a destination the map gets updated. Might introduce Booking.com API for pricing on accomodation and flights API for getting flight tickets prices ( will need some input for origin as it might not be London all times.).... TBC</h2>
+                <h2>Places Wishlist</h2>
                 <div class="image-text-container">
-                    <div class="image">
-                        <h3>Places Wishlist</h3>
+                    <div class="image" style="max-width:50%;">
                         <div class="places-list">
                             <ul>
                             <li onclick="UpdateMap('Berlin')">Berlin</li>
@@ -194,12 +193,25 @@
                     <div class="text">
                         <div class="containersWishlist">
                             <div class="containerWishlist">
-                            <h3>MAPS FOR ACCOMMODATION</h3>
+                            <h3>🛏️Acommodation🛏️</h3>
+                            <p></p>
+                                <div id="accommodation-container">
+                                    <!-- Property data will be displayed here -->
+                                    <a href="https://www.booking.com/" target="_blank">
+                                        <img src="bookingcom.svg" alt="Booking.com Logo" style="max-width: 50%;" />
+                                    </a>
+                                    <p>Or</p>
+                                    <a href="https://www.lastminute.com/" target="_blank">
+                                        <img src="images/lastminutecom-logo-C289A2F36A-seeklogo.com.png" alt="Booking.com Logo" style="max-width: 50%;" />
+                                    </a>
+                                </div>                
                             </div>
                             <div class="containerWishlist">
-                            <input type="text" placeholder="Origin">
-                            <h3>FLIGHTS TO DESTINATION</h3>
-                            <!-- You can add other elements related to flights here -->
+                                <h3>🛫Flight🌐</h3>
+                                <p></p>    
+                                    <div data-skyscanner-widget="SearchWidget"></div>
+                                    <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
+                            <!--    <script src="flight.js"></script>    Deactivated as per API call limit 20/month on free tier skyscanner api, added the widget instead-->                
                             </div>
                         </div>
                     </div>
@@ -212,6 +224,21 @@
         </div>
     </div>
     <div id="right-panel">
+        <input type="text" id="location-input" placeholder="ENTER to search..." style="margin-top:-780px;">
+        <iframe
+        id="harta"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        style="margin-top:20px;"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4&q=London&maptype=satellite">
+        </iframe>
+       
+        <script src="maps.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4"></script>
+    
+    </div>
+    <div id="mobile-harta">
         <iframe
         id="harta"
         loading="lazy"
@@ -220,7 +247,6 @@
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4&q=London&maptype=satellite">
         </iframe>
        
-        <script src="maps.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4"></script>
     
     </div>

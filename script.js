@@ -65,12 +65,39 @@ function hideAllContent() {
 
 // Function to show the content associated with the clicked responsive navbar item
 function showContent(targetId) {
-    hideAllContent(); // Hide all content first
-    const targetContent = document.getElementById(targetId);
-    if (targetContent) {
-        targetContent.style.display = 'block';
-    }
+  if (targetId === 'maps-content') {
+      // If the target content is 'maps-content', hide the entire left-panel
+      const leftPanel = document.getElementById('left-panel');
+      if (leftPanel) {
+          leftPanel.style.display = 'none';
+      }
+  } else {
+      // For other content, hide all content first
+      hideAllContent();
+
+      // Show the specific target content
+      const targetContent = document.getElementById(targetId);
+      if (targetContent) {
+          targetContent.style.display = 'block';
+      }
+  }
 }
+
+// Function to hide all content
+function hideAllContent() {
+  // Get a list of all content elements and hide them
+  const contentElements = document.querySelectorAll('.content');
+  contentElements.forEach(function (element) {
+      element.style.display = 'none';
+  });
+
+  // If you want to show the 'left-panel' when hiding the content, you can add the following line
+  const leftPanel = document.getElementById('left-panel');
+  if (leftPanel) {
+      leftPanel.style.display = 'block';
+  }
+}
+
 
 // Add click event listeners to responsive navbar list items
 responsiveNavbarItems.forEach(item => {
@@ -118,3 +145,21 @@ function toggleFullscreen(element) {
     }
   });
   
+
+
+  // Get references to elements
+const mobileHarta = document.getElementById("mobile-harta");
+const navbarItems1 = document.querySelectorAll('.responsive-navbar li[data-target]');
+
+// Add event listeners to the navbar items
+navbarItems1.forEach(item => {
+    item.addEventListener("click", function () {
+        const target = this.getAttribute("data-target");
+        // Check if the target is "maps-content"
+        if (target === "maps-content") {
+            mobileHarta.style.display = "block"; // Show the mobile-harta element
+        } else {
+            mobileHarta.style.display = "none"; // Hide the mobile-harta element for other content
+        }
+    });
+});
