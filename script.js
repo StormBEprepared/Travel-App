@@ -7,7 +7,7 @@ document.addEventListener("keydown", (e) => {
     }
    });
 
-/*alert("This website works with cookies. Your data will only be saved locally through them so features like 'wishlist' and 'visited places' will work without the need of an API / Database /etc. :)")*/
+alert("This website works with browser-based database. When using the app some of your settings/preferences may be saved. In order to keep those and enjoy the app, avoid deleting cache/memory occupied by this application. Thank you :)")
 
 // Get references to the content divs and navbar list items
 const contentDivs = document.querySelectorAll('.content');
