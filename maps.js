@@ -18,6 +18,6 @@ locationInput.addEventListener("keyup", function(event) {
 });
 
 function UpdateMap(destination) {
-    harta.src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4&q=${destination}&maptype=satellite`;
+    harta.src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4&q=${destination}&maptype=satellite&zoom=10`;
 }
 

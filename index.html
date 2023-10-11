@@ -56,109 +56,24 @@
             </div>
             <div class="content" id="visited-content">
                 <h2>Visited Places</h2>
-                <p>The following cards should contain links to cloud saved pictures of specific places. When clicking on specific card/place the map on rightpanel gets updated.</p>
+                <p>The following cards should contain links to cloud-saved pictures of specific places. When clicking on a specific card/place, the map on the right panel gets updated.</p>
+                <div class="add-location">
+                    <input type="text" id="cityInput" placeholder="City">
+                    <input type="text" id="textInput" placeholder="Description">
+                    <input type="text" id="folderLinkInput" placeholder="Resources/Pictures Link">
+                    <button id="addLocation">Add Location</button>
+                </div>
+                
                 <div class="top-bar" style="justify-content: center; flex-wrap: wrap;">
                     <div class="card-container" style="justify-content: center; flex-wrap: wrap;" id="page1">
-                        <div class="card">
-                            <div class="card2" onclick="UpdateMap('Berlin')">
-                                <div class="contentOfTravelled">
-                                    <h4 style="padding-top:5%;">Berlin</h4>
-                                    <p>Some text goes here.Some text goes here.Some text goes here.Some text goes here.</p>
-                                    <button>Info</button>
-                                </div>                              
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2" onclick="UpdateMap('Paris')">
-                                <div class="contentOfTravelled">
-                                    <h4 style="padding-top:5%;">Paris</h4>
-                                    <p>Some text goes here.Some text goes here.Some text goes here.Some text goes here.</p>
-                                    <button>Info</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
+                        <!-- Cards will be dynamically created here -->
                     </div>
-                    <div class="card-container" style="justify-content: center; flex-wrap: wrap;" id="page2">
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card2">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-container" style="justify-content: center; flex-wrap: wrap;" id="page2">
-                    </div>
+                    <!-- Add more card containers as needed (e.g., page2, page3, etc.) -->
                     <div class="pagination">
-                        <button id="prevPage">⬅️</button>
-                        <button id="nextPage">➡️</button>
+                        <button id="prevPage" style="display: none;">⬅️</button>
+                        <button id="nextPage" style="display: none;">➡️</button>
                     </div>
-                    <script src="pagination.js"></script>    
+                    <script src="pagination.js"></script>
                 </div>
             </div>
             <div class="content" id="wishlist-content">
@@ -174,23 +89,22 @@
                         <script src="wishlist.js"></script>
                     </div>
                     <div class="text">
+                        <h3>Resources:</h3>
                         <div class="containersWishlist">
                             <div class="containerWishlist">
-                            <h3>🛏️Acommodation🛏️</h3>
                             <p></p>
                                 <div id="accommodation-container">
                                     <!-- Property data will be displayed here -->
                                     <a href="https://www.booking.com/" target="_blank">
                                         <img src="bookingcom.svg" alt="Booking.com Logo" style="max-width: 50%;" />
                                     </a>
-                                    <p>Or</p>
+                                    <p></p>
                                     <a href="https://www.lastminute.com/" target="_blank">
                                         <img src="images/lastminutecom-logo-C289A2F36A-seeklogo.com.png" alt="Booking.com Logo" style="max-width: 50%;" />
                                     </a>
                                 </div>                
                             </div>
                             <div class="containerWishlist">
-                                <h3>🛫Flight🌐</h3>
                                 <p></p>    
                                     <div data-skyscanner-widget="SearchWidget"></div>
                                     <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
@@ -214,7 +128,7 @@
         allowfullscreen
         referrerpolicy="no-referrer-when-downgrade"
         style="margin-top:20px;"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4&q=London&maptype=satellite">
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4&q=London&maptype=satellite&zoom=10">
         </iframe>
        
         <script src="maps.js"></script>
@@ -227,7 +141,7 @@
         loading="lazy"
         allowfullscreen
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4&q=London&maptype=satellite">
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4&q=London&maptype=satellite&zoom=10">
         </iframe>
        
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwf4mpx0OpW5_KDK3ui9b8B6GwVHlR4n4"></script>

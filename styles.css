@@ -222,38 +222,50 @@ iframe.fullscreen {
     text-align: center;
 }
 
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .card {
-    width: 190px;
+    /* Your card styles here */
+    width: 190px; /* Adjust as needed */
     height: 254px;
     background-image: linear-gradient(163deg, #96a20f 0%, #eeff00 100%);
     border-radius: 20px;
-    transition: all .3s;
-    margin:1%;
-    justify-content: center;
-   }
-   
-   .card2 {
-    width: 190px;
-    height: 254px;
-    background-color: #a7a4a4;
-    border-radius:5px;
-    transition: all .2s;
-    justify-items: center;
-   }
-   .card2 .contentOfTravelled {
-    text-align: center;
-  }
-  .card2 .contentOfTravelled h4{
-    margin:0px;
+    transition: all 0.3s;
+    margin: 1%;
+    cursor: pointer;
 }
-   .card2:hover {
+
+.card2 {
+    /* Your card2 styles here */
+    width: 190px; /* Adjust as needed */
+    height: 254px;
+    background-color: #c1c1c1;
+    border-radius: 15px;
+    transition: all 0.2s;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Adjust the shadow as needed */
+}
+
+.card2 .contentOfTravelled {
+    text-align: center;
+}
+
+.card2 .contentOfTravelled h4 {
+    margin: 0;
+}
+
+.card2:hover {
     transform: scale(0.98);
     border-radius: 20px;
-   }
-   
-   .card:hover {
-    box-shadow: 0px 0px 30px 1px rgba(189, 235, 8, 0.792);
-   }
+}
+
+.card:hover {
+    box-shadow: 0 0 30px 1px rgba(189, 235, 8, 0.792);
+}
   
   
    button {
