@@ -7,7 +7,7 @@
     }
    });*/
 
-
+alert("This website works with cookies. Your data will only be saved locally through them so features like 'wishlist' and 'visited places' will work without the need of an API / Database /etc. :)")
 
 // Get references to the content divs and navbar list items
 const contentDivs = document.querySelectorAll('.content');
