@@ -163,3 +163,40 @@ navbarItems1.forEach(item => {
         }
     });
 });
+
+  // Function to handle Ctrl+C (copy)
+function handleCopy(event, inputField) {
+  if (event.ctrlKey && event.key === 'c') {
+    const selectedText = inputField.value.substring(inputField.selectionStart, inputField.selectionEnd);
+    navigator.clipboard.writeText(selectedText).then(function() {
+      console.log('Text copied to clipboard');
+    }).catch(function(err) {
+      console.error('Failed to copy text: ', err);
+    });
+  }
+}
+
+  // Function to handle Ctrl+V (paste)
+function handlePaste(event, inputField) {
+  if (event.ctrlKey && event.key === 'v') {
+    navigator.clipboard.readText().then(function(text) {
+      inputField.setRangeText(text, inputField.selectionStart, inputField.selectionEnd, 'end');
+    }).catch(function(err) {
+      console.error('Failed to paste text: ', err);
+    });
+  }
+}
+
+const cityInput = document.getElementById('cityInput');
+const textInput = document.getElementById('textInput');
+const folderLinkInput = document.getElementById('folderLinkInput');
+
+  // Attach event listeners for copy and paste functionality to each input field
+cityInput.addEventListener('keydown', (event) => handleCopy(event, cityInput));
+cityInput.addEventListener('keydown', (event) => handlePaste(event, cityInput));
+
+textInput.addEventListener('keydown', (event) => handleCopy(event, textInput));
+textInput.addEventListener('keydown', (event) => handlePaste(event, textInput));
+
+folderLinkInput.addEventListener('keydown', (event) => handleCopy(event, folderLinkInput));
+folderLinkInput.addEventListener('keydown', (event) => handlePaste(event, folderLinkInput));
